@@ -1,0 +1,140 @@
+@import "../../../index";
+
+.search {
+  position: relative;
+
+  .search__button {
+    background-color: $gray;
+    border-radius: 6px;
+    padding: 10px;
+    min-width: 250px;
+    color: rgba($color: $lightColor, $alpha: 0.8);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    svg {
+      font-size: 18px;
+      margin-right: 6px;
+    }
+  }
+
+  .search__container {
+    width: 350px;
+    // height: 500px;
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba($color: $primaryColor, $alpha: 0.15);
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    z-index: 100;
+    overflow: hidden;
+
+    .search__box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+
+      .search__input {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        color: rgba($color: $lightColor, $alpha: 0.8);
+
+        label {
+          display: flex;
+          font-size: 18px;
+        }
+
+        input {
+          border: 0;
+          font-family: $primaryFont;
+          color: rgba($color: $lightColor, $alpha: 1);
+          padding: 10px;
+          width: 100%;
+
+          &::placeholder {
+            color: rgba($color: $lightColor, $alpha: 0.8);
+          }
+        }
+      }
+
+      .close {
+        color: rgba($color: $lightColor, $alpha: 0.5);
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+
+    .search__results {
+      // height: 65%;
+      max-height: 300px;
+      overflow-y: auto;
+      padding-right: 10px;
+
+      .result {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border-radius: 6px;
+        padding: 8px 10px;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        .name {
+          text-transform: capitalize;
+          color: $primaryColor;
+          font-size: 15px;
+          font-weight: 500;
+        }
+
+        .symbol {
+          text-transform: uppercase;
+          color: rgba($color: $lightColor, $alpha: 0.8);
+          padding-left: 10px;
+        }
+
+        &:hover {
+          background-color: $gray;
+        }
+      }
+    }
+  }
+
+  .recently__searched {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 10px 10px;
+
+    .result {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: $gray;
+      border-radius: 6px;
+      padding: 8px 12px;
+      transition: all 0.3s;
+      cursor: pointer;
+      margin-right: 10px;
+
+      .name {
+        text-transform: capitalize;
+        color: $primaryColor;
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 4px;
+      }
+
+      .symbol {
+        text-transform: uppercase;
+        color: rgba($color: $lightColor, $alpha: 0.8);
+        padding-left: 10px;
+      }
+    }
+  }
+}

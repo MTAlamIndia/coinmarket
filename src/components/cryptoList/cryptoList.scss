@@ -1,0 +1,173 @@
+@import "../../index";
+
+.crypto__list {
+  padding: 20px 0;
+
+  .table__responsive {
+    overflow-x: auto;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      thead {
+        th {
+          text-transform: capitalize;
+          color: $primaryColor;
+          font-weight: 600;
+          cursor: pointer;
+          text-align: right;
+          padding: 15px 10px;
+          border-bottom: 1px solid $tableColor;
+          border-top: 1px solid $tableColor;
+
+          &:first-child,
+          &:nth-child(2) {
+            text-align: center;
+          }
+
+          &:nth-child(3) {
+            text-align: left;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          &:hover {
+            background-color: $tableColor;
+          }
+        }
+        td {
+          text-align: right;
+          font-size: 14px;
+          padding: 15px 10px;
+          border-bottom: 1px solid $tableColor;
+          font-weight: 400;
+          color: $primaryColor;
+
+          svg {
+            font-size: 12px;
+          }
+
+          &:first-child,
+          &:nth-child(2) {
+            text-align: center;
+          }
+
+          &:nth-child(3) {
+            text-align: left;
+          }
+
+          &.market__up {
+            color: $green;
+          }
+          &.market__down {
+            color: $red;
+          }
+
+          &.wish__icon {
+            font-size: 18px;
+            cursor: pointer;
+
+            svg {
+              font-size: 18px;
+            }
+
+            &.filled,
+            &:hover {
+              color: $blue;
+            }
+          }
+
+          &.name {
+            font-size: 16px;
+
+            a {
+              color: $primaryColor;
+
+              img {
+                width: 24px;
+                vertical-align: middle;
+                margin-right: 10px;
+              }
+
+              span {
+                color: rgba($color: $lightColor, $alpha: 0.7);
+                font-size: 14px;
+                padding-left: 8px;
+              }
+
+              &:hover {
+                color: $blue;
+              }
+            }
+          }
+          .timestamp {
+            display: block;
+            font-size: 13px;
+            font-weight: 400;
+          }
+
+          .currency {
+            font-size: 12px;
+            font-weight: 400;
+            display: inline-block;
+            padding-right: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        margin: 0 4px;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-width: 30px;
+          height: 30px;
+          border-radius: 4px;
+          padding: 6px;
+          background-color: transparent;
+          color: $primaryColor;
+          font-weight: 500;
+          font-size: 15px;
+          cursor: pointer;
+          user-select: none;
+
+          &:hover {
+            background-color: $gray;
+          }
+        }
+
+        &.selected a {
+          background-color: $blue;
+          color: white;
+          cursor: default;
+        }
+
+        &.disabled a {
+          background-color: transparent;
+          cursor: default;
+        }
+      }
+    }
+  }
+}

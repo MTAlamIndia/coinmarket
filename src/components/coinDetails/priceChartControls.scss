@@ -1,0 +1,36 @@
+@import "../../index";
+
+.time__stamp__controls {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: $gray;
+    padding: 4px;
+    border-radius: 6px;
+
+    li {
+      cursor: pointer;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: transparent;
+      transition: all 0.3s;
+      font-weight: 500;
+      user-select: none;
+
+      &:not(:last-of-type) {
+        margin-right: 4px;
+      }
+
+      &:hover,
+      &.active {
+        background-color: white;
+      }
+    }
+  }
+}

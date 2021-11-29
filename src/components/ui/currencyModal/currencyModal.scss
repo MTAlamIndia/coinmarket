@@ -1,0 +1,76 @@
+@import "../../../index";
+
+.currency__modal {
+  padding: 10px;
+
+  .search__currency {
+    margin: 30px 0 15px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    label {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      font-size: 18px;
+      z-index: 1;
+    }
+
+    input {
+      background-color: transparent;
+      border: 0;
+      outline: 0;
+      width: 100%;
+      padding: 10px;
+      font-family: $primaryFont;
+      background-color: $gray;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      position: absolute;
+      padding-left: 40px;
+      transition: all 0.3s;
+
+      &:focus {
+        border-color: $blue;
+        box-shadow: 0 0 10px 0px rgba($color: $blue, $alpha: 0.15);
+      }
+    }
+  }
+
+  .currency_cards {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-y: auto;
+    max-height: 300px;
+    padding: 10px;
+
+    .currency_card {
+      width: 23%;
+      background-color: $gray;
+      margin: 1%;
+      padding: 15px;
+      border-radius: 4px;
+      color: $primaryColor;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 500;
+
+      svg {
+        color: $green;
+        font-size: 20px;
+        margin-left: 4px;
+      }
+
+      &:hover {
+        background-color: $gray;
+      }
+    }
+  }
+}

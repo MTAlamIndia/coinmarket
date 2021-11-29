@@ -1,0 +1,36 @@
+@import "../../index";
+
+.coin__details {
+  padding: 30px 0;
+
+  .info__price__data {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $gray;
+
+    .coin__info {
+      width: 40%;
+    }
+
+    .coin__price__data {
+      width: 60%;
+    }
+  }
+
+  .coin__chart__statistics {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+
+    .price__chart {
+      width: 70%;
+      padding-right: 5%;
+    }
+
+    .statistics {
+      width: 25%;
+      padding-top: 15px;
+    }
+  }
+}

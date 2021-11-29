@@ -1,0 +1,43 @@
+@import "../../../index";
+
+.bottom__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid $gray;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      img {
+        height: 32px;
+        width: auto;
+      }
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+
+      a {
+        padding: 16px;
+        font-weight: 600;
+        color: $primaryColor;
+        text-transform: capitalize;
+
+        &:hover,
+        &.active {
+          color: $blue;
+        }
+      }
+    }
+  }
+}
