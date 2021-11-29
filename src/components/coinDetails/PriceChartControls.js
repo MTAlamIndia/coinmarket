@@ -40,7 +40,14 @@ const PriceChartControls = () => {
 
       dispatch(getChartDetails([{ name: "price", data: updatedPrices }]));
     }
-  }, [coinDetails, coinChart, selectedCurrency, chartTimeStamp]);
+  }, [
+    coinDetails,
+    coinChart,
+    selectedCurrency,
+    chartTimeStamp,
+    dispatch,
+    isLoading,
+  ]);
 
   return (
     <>

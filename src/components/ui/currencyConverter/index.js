@@ -114,7 +114,7 @@ const CurrencyConverter = () => {
           <input
             type="number"
             id="target"
-            value={floatingNumbers(targetCurrency?.value)}
+            value={floatingNumbers(targetCurrency?.value) || 0}
             onChange={targetCurrencyHandler}
           />
         </div>

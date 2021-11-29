@@ -5,7 +5,6 @@ import ReactPaginate from "react-paginate";
 import { useDispatch, useSelector } from "react-redux";
 import { getCurrentPage } from "../../store/cryptoSlice";
 
-import Loader from "../ui/loader";
 import CryptoCoin from "./CryptoCoin";
 
 import "./cryptoList.scss";

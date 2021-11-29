@@ -13,13 +13,16 @@ import "./coinInfo.scss";
 
 const CoinInfo = () => {
   const { coinDetails } = useSelector((state) => state.cryptoSliceReducer);
+  const { wishlist } = useSelector((state) => state.wishlistReducer);
 
   if (!coinDetails) return <Loader />;
 
-  const { name, image, symbol, market_cap_rank, categories, links } =
+  const { id, name, image, symbol, market_cap_rank, categories, links } =
     coinDetails;
 
   const { homepage, blockchain_site } = links;
+
+  const filteredWishlist = wishlist?.find((item) => item?.id === id);
 
   return (
     <>
@@ -36,7 +39,7 @@ const CoinInfo = () => {
               <Badge classes="symbol">{symbol.toUpperCase()}</Badge>
 
               <div className="wishlist">
-                <AiOutlineStar />
+                {!filteredWishlist ? <AiOutlineStar /> : <AiFillStar />}
               </div>
             </div>
 

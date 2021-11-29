@@ -17,12 +17,12 @@ const BottomHeader = () => {
             <nav>
               <ul>
                 <li>
-                  <NavLink to="/" activeClassName="active">
+                  <NavLink to="/" activeclassname="active">
                     Cryptocurrencies
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/wishlist" activeClassName="active">
+                  <NavLink to="/wishlist" activeclassname="active">
                     Wishlist
                   </NavLink>
                 </li>
