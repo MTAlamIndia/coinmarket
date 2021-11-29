@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BiCaretDown, BiCaretUp } from "react-icons/bi";
+// import { BiCaretDown, BiCaretUp } from "react-icons/bi";
 import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
 import ReactPaginate from "react-paginate";
 import { useDispatch, useSelector } from "react-redux";
@@ -56,12 +56,12 @@ const CryptoList = ({ coinsList, coinsCount }) => {
               {tableHeadtTitles?.map((item, i) => (
                 <th key={i} onClick={() => sortTitleHandle(item)}>
                   {item}
-                  {sortedTitle === item && (
+                  {/* {sortedTitle === item && (
                     <>
                       {sortType === "inc" && <BiCaretUp />}
                       {sortType === "dec" && <BiCaretDown />}
                     </>
-                  )}
+                  )} */}
                 </th>
               ))}
             </tr>
