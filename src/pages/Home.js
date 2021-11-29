@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import CryptoList from "../components/cryptoList";
 import CryptoListHead from "../components/cryptoList/CryptoListHead";
-import Main from "../components/layout/main";
+import Layout from "../components/layout";
 import Container from "../components/ui/container";
 import Loader from "../components/ui/loader";
 import {
@@ -25,14 +25,14 @@ const Home = () => {
 
   return (
     <>
-      <Main>
+      <Layout>
         <Container>
           <div className="crypto__list">
             <CryptoListHead title="Today's Cryptocurrency Prices by Market Cap" />
             <CryptoList coinsList={coinsList} coinsCount={coinsCount} />
           </div>
         </Container>
-      </Main>
+      </Layout>
     </>
   );
 };

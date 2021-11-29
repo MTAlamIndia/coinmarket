@@ -5,10 +5,10 @@ import { useParams } from "react-router-dom";
 import { useGetCoinDetailsQuery } from "../services/cryptoApi";
 import { getCoinDetails } from "../store/cryptoSlice";
 
-import Main from "../components/layout/main";
 import Container from "../components/ui/container";
 import Loader from "../components/ui/loader";
 import CoinDetails from "../components/coinDetails";
+import Layout from "../components/layout";
 
 const CurrencyDetails = () => {
   const { currency } = useParams();
@@ -22,7 +22,7 @@ const CurrencyDetails = () => {
 
   return (
     <>
-      <Main>
+      <Layout>
         <Container>
           {isLoading && <Loader />}
           {!isLoading && (
@@ -31,7 +31,7 @@ const CurrencyDetails = () => {
             </>
           )}
         </Container>
-      </Main>
+      </Layout>
     </>
   );
 };

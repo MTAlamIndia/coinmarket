@@ -2,14 +2,14 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import CryptoList from "../components/cryptoList";
 import CryptoListHead from "../components/cryptoList/CryptoListHead";
-import Main from "../components/layout/main";
+import Layout from "../components/layout";
 import Container from "../components/ui/container";
 
 const Wishlist = () => {
   const { wishlist } = useSelector((state) => state.wishlistReducer);
   return (
     <>
-      <Main>
+      <Layout>
         <Container>
           <div className="crypto__list">
             <CryptoListHead title="Wishlist Coins" />
@@ -27,7 +27,7 @@ const Wishlist = () => {
             )}
           </div>
         </Container>
-      </Main>
+      </Layout>
     </>
   );
 };
